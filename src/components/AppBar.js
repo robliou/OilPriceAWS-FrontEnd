@@ -73,29 +73,21 @@ export default function SearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="https://youtu.be/KLKSMVlgVCM">
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              About
-            </Typography>
-          </Link>
-          <div />
-          <Box
-            sx={{
-              flexDirection: "row-reverse",
-              mr: 2,
-            }}
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
+            <Link href="https://youtu.be/KLKSMVlgVCM">About</Link>
+          </Typography>
+          <div />
+          <Box>
             <Image src={devpost} height="5vh" width={140} />
           </Box>
 
           <Box
             sx={{
-              flexDirection: "row-reverse",
               mr: 2,
             }}
           >
