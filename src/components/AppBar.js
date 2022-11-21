@@ -81,7 +81,7 @@ export default function SearchAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            About
+            Video
           </Typography>
           <div />
           <Box>
@@ -91,7 +91,7 @@ export default function SearchAppBar() {
           <Box
             sx={{
               mr: 2,
-              ml: 2,
+              ml: 3,
             }}
           >
             <Image src={dbnomics} width={140} />
