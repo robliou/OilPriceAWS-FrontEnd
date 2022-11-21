@@ -64,22 +64,24 @@ export default function SearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 0 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Link href="https://youtu.be/KLKSMVlgVCM">
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 0 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Link>
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Link href="https://youtu.be/KLKSMVlgVCM">About</Link>
+            About
           </Typography>
           <div />
           <Box>
@@ -89,6 +91,7 @@ export default function SearchAppBar() {
           <Box
             sx={{
               mr: 2,
+              ml: 2,
             }}
           >
             <Image src={dbnomics} width={140} />
