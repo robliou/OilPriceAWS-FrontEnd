@@ -81,7 +81,7 @@ export default function SearchAppBar() {
             About
           </Typography>
 
-          <Grid item md={2} margintop={2} marginbottom={2}>
+          <Grid item md={2} margintop={2} marginbottom={2} marginright={4}>
             <Image src={devpost} height="5vh" width={140} />
           </Grid>
           <Grid
@@ -90,6 +90,7 @@ export default function SearchAppBar() {
             margintop={2}
             marginbottom={2}
             width={{ width: "70%" }}
+            marginright={2}
           >
             <Image src={dbnomics} width={140} />
           </Grid>

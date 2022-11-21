@@ -156,9 +156,7 @@ export default function Home() {
               return e[k];
             });
           });
-          //is this even necessary? https://stackoverflow.com/questions/42053773/how-to-convert-a-json-object-to-array-of-arrays
           var outputData = result[0].map(Object.values);
-          //turns array of objects into array of arrays https://stackoverflow.com/questions/22477612/converting-array-of-objects-into-array-of-arrays
           console.log(outputData);
 
           setProduction(outputData);
@@ -305,7 +303,7 @@ export default function Home() {
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <>
           {/* <Stack spacing={2}> */}
-          <Grid item justifyContent={"space-evenly"} xs={12} md={2}>
+          <Grid item justifyContent={"space-evenly"} xs={8} md={2}>
             {currentPrice !== "empty" ? (
               <Paper elevation={4}>
                 <Card currentPrice={currentPrice} />
@@ -314,7 +312,7 @@ export default function Home() {
               ""
             )}
           </Grid>
-          <Grid item justifyContent={"space-evenly"} xs={12} md={2}>
+          <Grid item justifyContent={"space-evenly"} xs={8} md={2}>
             {currentPrice !== "empty" ? (
               <Paper elevation={4}>
                 <CardFore />
@@ -354,6 +352,7 @@ export default function Home() {
               {four ? (
                 <Plot
                   data={four.data} /* layout={plot.layout} */
+                  responsive={true}
                   layout={{
                     width: 565,
                     height: 450,
@@ -378,6 +377,7 @@ export default function Home() {
               {newSupply ? (
                 <Plot
                   data={newSupply.data} /* layout={plot.layout} */
+                  responsive={true}
                   stackgroup="one"
                   layout={{
                     width: 565,
@@ -402,6 +402,7 @@ export default function Home() {
               {production ? (
                 <Plot
                   data={data_prod} /* layout={plot.layout} */
+                  responsive={true}
                   layout={{
                     width: 565,
                     height: 450,
@@ -462,6 +463,7 @@ export default function Home() {
               {consumption ? (
                 <Plot
                   data={data} /* layout={plot.layout} */
+                  responsive={true}
                   layout={{
                     width: 565,
                     height: 450,
