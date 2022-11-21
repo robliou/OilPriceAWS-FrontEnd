@@ -97,7 +97,7 @@ export default function SearchAppBar() {
           >
             <Box
               sx={{
-                flexDirection: "row-reverse",
+                display: { xs: "flex", md: none },
                 mr: 2,
               }}
             >
@@ -118,8 +118,8 @@ export default function SearchAppBar() {
           >
             <Box
               sx={{
-                flexDirection: "row-reverse",
                 mr: 2,
+                display: { xs: "flex", md: none },
               }}
             >
               <Image src={dbnomics} width={140} />
