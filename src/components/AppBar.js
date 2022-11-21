@@ -63,7 +63,7 @@ export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             size="large"
             edge="start"
@@ -83,49 +83,24 @@ export default function SearchAppBar() {
               About
             </Typography>
           </Link>
+          <div />
+          <Box
+            sx={{
+              flexDirection: "row-reverse",
+              mr: 2,
+            }}
+          >
+            <Image src={devpost} height="5vh" width={140} />
+          </Box>
 
-          <Grid
-            item
-            sm={0}
-            md={2}
-            margintop={2}
-            marginbottom={2}
-            marginright={4}
+          <Box
             sx={{
-              justifyContent: "flex-end",
+              flexDirection: "row-reverse",
+              mr: 2,
             }}
           >
-            <Box
-              sx={{
-                flexDirection: "row-reverse",
-                mr: 2,
-              }}
-            >
-              <Image src={devpost} height="5vh" width={140} />
-            </Box>
-          </Grid>
-          <Grid
-            item
-            sm={0}
-            md={2}
-            margintop={2}
-            marginbottom={2}
-            width={{ width: "70%" }}
-            marginright={2}
-            sx={{
-              justifyContent: "flex-end",
-            }}
-          >
-            <Box
-              sx={{
-                flexDirection: "row-reverse",
-                mr: 2,
-                display: { xs: "flex", md: none },
-              }}
-            >
-              <Image src={dbnomics} width={140} />
-            </Box>
-          </Grid>
+            <Image src={dbnomics} width={140} />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
