@@ -91,6 +91,9 @@ export default function SearchAppBar() {
             margintop={2}
             marginbottom={2}
             marginright={4}
+            sx={{
+              justifyContent: "flex-end",
+            }}
           >
             <Box
               sx={{
@@ -109,6 +112,9 @@ export default function SearchAppBar() {
             marginbottom={2}
             width={{ width: "70%" }}
             marginright={2}
+            sx={{
+              justifyContent: "flex-end",
+            }}
           >
             <Box
               sx={{
