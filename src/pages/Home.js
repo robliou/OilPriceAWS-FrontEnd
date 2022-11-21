@@ -44,9 +44,6 @@ export default function Home() {
 
   const [historicalPrices, setHistoricalPrices] = useState("empty");
 
-  const [mergedPrices, setMergedPrices] = useState("");
-  const [oilPricesObserved, setOilPricesObserved] = useState("");
-
   const [consumption, setConsumption] = useState("empty");
   const [production, setProduction] = useState("empty");
   //Next time getting 'undefined' issue because of uninitialized variable, add in a default variable first! https://dmitripavlutin.com/7-tips-to-handle-undefined-in-javascript/
@@ -54,7 +51,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("http://127.0.0.1:5000/api/currentPrice")
+        .get("https://regression-backend.onrender.com/api/currentPrice")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -82,7 +79,7 @@ export default function Home() {
     //Four Forecasts
     (function () {
       axios
-        .get("http://127.0.0.1:5000/api/four")
+        .get("https://regression-backend.onrender.com/api/four")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -100,7 +97,7 @@ export default function Home() {
     //New Supply
     (function () {
       axios
-        .get("http://127.0.0.1:5000/api/newSupply")
+        .get("https://regression-backend.onrender.com/api/newSupply")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -117,7 +114,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("http://127.0.0.1:5000/api/consumption")
+        .get("https://regression-backend.onrender.com/api/consumption")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
@@ -147,7 +144,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("http://127.0.0.1:5000/api/production")
+        .get("https://regression-backend.onrender.com/api/production")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
@@ -160,29 +157,11 @@ export default function Home() {
             });
           });
           //is this even necessary? https://stackoverflow.com/questions/42053773/how-to-convert-a-json-object-to-array-of-arrays
-          console.log("this is result", res);
           var outputData = result[0].map(Object.values);
           //turns array of objects into array of arrays https://stackoverflow.com/questions/22477612/converting-array-of-objects-into-array-of-arrays
           console.log(outputData);
 
           setProduction(outputData);
-        })
-
-        .catch(function (error) {
-          console.log(error);
-        });
-    })();
-  }, []);
-
-  useEffect(() => {
-    (function () {
-      axios
-        .get("http://127.0.0.1:5000/api/merged")
-        .then((res) => JSON.stringify(res))
-        .then(function (res) {
-          const obj = JSON.parse(res);
-
-          setMergedPrices(obj);
         })
 
         .catch(function (error) {
@@ -198,12 +177,6 @@ export default function Home() {
   var sliced4 = consumption[3].slice(0, consumption[3].length - 1); //will contain ['a', 'b', 'c']
   var sliced5 = consumption[4].slice(0, consumption[4].length - 1); //will contain ['a', 'b', 'c']
   //slice gets range of items in an array
-
-  console.log("sliced1", sliced1);
-  console.log("sliced2", sliced2);
-  console.log("sliced3", sliced3);
-  console.log("sliced4", sliced4);
-  console.log("sliced5", sliced5);
 
   var trace1 = {
     x: sliced5,
@@ -247,12 +220,6 @@ export default function Home() {
   var sliced4_prod = production[3].slice(0, production[3].length - 1); //will contain ['a', 'b', 'c']
   var sliced5_prod = production[4].slice(0, production[4].length - 1); //will contain ['a', 'b', 'c']
   //slice gets range of items in an array
-
-  console.log("sliced1_prod", sliced1_prod);
-  console.log("sliced2_prod", sliced2_prod);
-  console.log("sliced3_prod", sliced3_prod);
-  console.log("sliced4_prod", sliced4_prod);
-  console.log("sliced5_prod", sliced5_prod);
 
   var trace1_prod = {
     x: sliced5_prod,
