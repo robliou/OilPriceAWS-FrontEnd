@@ -81,11 +81,19 @@ export default function SearchAppBar() {
             About
           </Typography>
 
-          <Grid item md={2} margintop={2} marginbottom={2} marginright={4}>
+          <Grid
+            item
+            sm={0}
+            md={2}
+            margintop={2}
+            marginbottom={2}
+            marginright={4}
+          >
             <Image src={devpost} height="5vh" width={140} />
           </Grid>
           <Grid
             item
+            sm={0}
             md={2}
             margintop={2}
             marginbottom={2}
