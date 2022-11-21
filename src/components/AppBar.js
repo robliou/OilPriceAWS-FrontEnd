@@ -94,7 +94,7 @@ export default function SearchAppBar() {
           >
             <Box
               sx={{
-                justifyContent: "flex-end",
+                flexDirection: "row-reverse",
                 mr: 2,
               }}
             >
@@ -112,7 +112,7 @@ export default function SearchAppBar() {
           >
             <Box
               sx={{
-                justifyContent: "flex-end",
+                flexDirection: "row-reverse",
                 mr: 2,
               }}
             >
