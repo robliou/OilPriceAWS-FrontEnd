@@ -4,6 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
 
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -72,14 +73,16 @@ export default function SearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            About
-          </Typography>
+          <Link href="https://youtu.be/KLKSMVlgVCM">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            >
+              About
+            </Typography>
+          </Link>
 
           <Grid
             item
@@ -89,7 +92,14 @@ export default function SearchAppBar() {
             marginbottom={2}
             marginright={4}
           >
-            <Image src={devpost} height="5vh" width={140} />
+            <Box
+              sx={{
+                justifyContent: "flex-end",
+                mr: 2,
+              }}
+            >
+              <Image src={devpost} height="5vh" width={140} />
+            </Box>
           </Grid>
           <Grid
             item
@@ -100,7 +110,14 @@ export default function SearchAppBar() {
             width={{ width: "70%" }}
             marginright={2}
           >
-            <Image src={dbnomics} width={140} />
+            <Box
+              sx={{
+                justifyContent: "flex-end",
+                mr: 2,
+              }}
+            >
+              <Image src={dbnomics} width={140} />
+            </Box>
           </Grid>
         </Toolbar>
       </AppBar>
