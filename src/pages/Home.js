@@ -291,15 +291,30 @@ export default function Home() {
 
   return (
     <>
-      <Typography
-        variant="h3"
-        component="h2"
-        marginBottom={3}
-        marginTop={5}
-        align="center"
+      <Box
+        sx={{
+          width: { xs: "50%", sm: "80%", md: "100%" },
+          marginLeft: { xs: "2", sm: "2", md: "0" },
+        }}
       >
-        Oil Price Prediction Engine
-      </Typography>
+        <Typography
+          variant="h3"
+          component="h2"
+          marginLeft={12}
+          marginBottom={3}
+          marginTop={5}
+          xs={8}
+          fontSize={{ xs: "1.8rem", sm: "2.2rem", md: "2.4rem" }}
+          width={{ xs: "100%" }}
+          sx={{
+            textAlign: "center",
+            justifyContent: "center",
+            align: "center",
+          }}
+        >
+          Oil Price Prediction Engine
+        </Typography>
+      </Box>
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <>
           {/* <Stack spacing={2}> */}

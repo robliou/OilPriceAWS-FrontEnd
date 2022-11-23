@@ -85,7 +85,14 @@ export default function SearchAppBar() {
           </Typography>
           <div />
           <Box>
-            <Image src={devpost} height="5vh" width={140} />
+            <Image
+              src={devpost}
+              height="5vh"
+              width={140}
+              sx={{
+                width: { xs: "50%", sm: "80%", md: "140" },
+              }}
+            />
           </Box>
 
           <Box
@@ -94,7 +101,13 @@ export default function SearchAppBar() {
               ml: 3,
             }}
           >
-            <Image src={dbnomics} width={140} />
+            <Image
+              src={dbnomics}
+              width={140}
+              sx={{
+                width: { xs: "50%", sm: "80%", md: "140" },
+              }}
+            />
           </Box>
         </Toolbar>
       </AppBar>
