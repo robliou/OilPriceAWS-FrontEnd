@@ -56,8 +56,9 @@ export default function Home() {
         .then(function (res) {
           const obj = JSON.parse(res);
           if (currentPrice !== "") {
-            let thePrice = obj.data.ask;
-
+            //let thePrice = obj.data.ask;
+            //due to Yahoo Finance deprecation; need to insert manually for now!
+            let thePrice = 79;
             console.log("this is obj", obj);
 
             console.log("this is thePrice", thePrice);
