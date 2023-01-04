@@ -56,8 +56,9 @@ export default function Home() {
         .then(function (res) {
           const obj = JSON.parse(res);
           if (currentPrice !== "") {
-            let thePrice = obj.data.ask;
-
+            // let thePrice = obj.data.ask;
+            // Hiding this for now as Yahoo Finance Data Reader is down!
+            let thePrice = 79;
             console.log("this is obj", obj);
 
             console.log("this is thePrice", thePrice);
@@ -115,7 +116,15 @@ export default function Home() {
     (function () {
       axios
         .get("https://oilpriceawsbackend.onrender.com/api/consumption")
+        /* .then(function (res) {
+          //handle success
+          console.log("this is first response 0", res);
+        }) */
         .then((res) => JSON.stringify(res))
+        /* .then(function (res) {
+          //handle success
+          console.log("this is first response 1", res);
+        }) */
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
           const obj = JSON.parse(res);
@@ -145,7 +154,16 @@ export default function Home() {
     (function () {
       axios
         .get("https://oilpriceawsbackend.onrender.com/api/production")
+        /* .then(function (res) {
+          //handle success
+          console.log("this is first response 0", res);
+        }) */
+        //NOTE- for axios-if you try to console.log the response; the whole process will stall and fail. Really weird! Can use for testing, but if get stuck, just delete any console.log statements
         .then((res) => JSON.stringify(res))
+        /* .then(function (res) {
+          //handle success
+          console.log("this is first response 1", res);
+        }) */
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
           const obj = JSON.parse(res);

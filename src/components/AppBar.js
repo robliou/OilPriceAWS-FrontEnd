@@ -16,6 +16,7 @@ import Image from "mui-image";
 
 import dbnomics from "./../images/dbnomics.png";
 import devpost from "./../images/devpost.png";
+import video from "./../images/video.png";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -65,24 +66,15 @@ export default function SearchAppBar() {
       <AppBar position="static">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Link href="https://youtu.be/KLKSMVlgVCM">
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 0 }}
-            >
-              <MenuIcon />
-            </IconButton>
+            <Image
+              src={video}
+              width={50}
+              sx={{
+                width: { xs: "50%", sm: "80%", md: "140" },
+              }}
+            />{" "}
           </Link>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Video
-          </Typography>
+
           <div />
           <Box>
             <Image
