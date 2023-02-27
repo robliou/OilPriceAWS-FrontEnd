@@ -51,7 +51,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("https://oilpriceawsbackend.onrender.com/api/currentPrice")
+        .get("https://neodash-back.onrender.com/api/currentPrice")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -80,7 +80,7 @@ export default function Home() {
     //Four Forecasts
     (function () {
       axios
-        .get("https://oilpriceawsbackend.onrender.com/api/four")
+        .get("https://neodash-back.onrender.com/api/four")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -98,7 +98,7 @@ export default function Home() {
     //New Supply
     (function () {
       axios
-        .get("https://oilpriceawsbackend.onrender.com/api/newSupply")
+        .get("https://neodash-back.onrender.com/api/newSupply")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           const obj = JSON.parse(res);
@@ -115,7 +115,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("https://oilpriceawsbackend.onrender.com/api/consumption")
+        .get("https://neodash-back.onrender.com/api/consumption")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
@@ -145,7 +145,7 @@ export default function Home() {
   useEffect(() => {
     (function () {
       axios
-        .get("https://oilpriceawsbackend.onrender.com/api/production")
+        .get("https://neodash-back.onrender.com/api/production")
         .then((res) => JSON.stringify(res))
         .then(function (res) {
           //const obj = Object.keys(res).map((key) => [key, res[key]]);
