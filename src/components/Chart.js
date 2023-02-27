@@ -15,7 +15,7 @@ export default function Chart() {
     (function () {
       axios
         /*         .get("http://127.0.0.1:5000/api/four")
-         */ .get("https://ddr-store.onrender.com/api/four")
+         */ .get("https://neodash-frontend.onrender.com/api/four")
 
         .then((res) => JSON.stringify(res))
         .then(function (res) {
